@@ -17,7 +17,7 @@ class Switchers extends React.Component {
         <Route path="/profile/edit" component={ ProfileEdit } />
         <Route path="/profile" component={ Profile } />
         <Route path="/album/:id" component={ Album } />
-        <Route path="/" component={ Login } />
+        <Route exact path="/" component={ Login } />
         <Route path="*" component={ NotFound } />
       </Switch>
     );
