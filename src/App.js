@@ -1,8 +1,15 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Switchers from './Switchers';
 
 class App extends React.Component {
   render() {
-    return (<p>TrybeTunes</p>);
+    return (
+      <BrowserRouter>
+        <Switchers />
+        <p>TrybeTunes</p>
+      </BrowserRouter>
+    );
   }
 }
 
