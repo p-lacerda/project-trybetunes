@@ -40,6 +40,7 @@ class Login extends React.Component {
     const NUMBER_LENGTH = 3;
     const enabled = name.length >= NUMBER_LENGTH;
 
+    // Fernando Oliveira me ajudou a formular essa resolução
     if (loading) return <Loading />;
     if (redirect) return <Redirect to="/search" />;
     return (
