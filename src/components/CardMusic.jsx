@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import propTypes from 'prop-types';
 
 class CardMusic extends React.Component {
   render() {
@@ -19,5 +20,12 @@ class CardMusic extends React.Component {
     );
   }
 }
+
+CardMusic.propTypes = {
+  collectionId: propTypes.number.isRequired,
+  artworkUrl100: propTypes.string.isRequired,
+  collectionName: propTypes.string.isRequired,
+  artistName: propTypes.string.isRequired,
+};
 
 export default CardMusic;
