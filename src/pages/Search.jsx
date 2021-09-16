@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from '../components/Loading';
@@ -62,7 +61,8 @@ class Search extends React.Component {
     let resEnabled = '';
     let vazioEnabled = '';
     if (resultEnabled) resEnabled = <p>{`Resultado de álbuns de: ${pesquisaAtual}`}</p>;
-    if (albums.length === 0 && resultEnabled) vazioEnabled = <p>Nenhum álbum foi encontrado</p>;
+    if (albums.length === 0
+      && resultEnabled) vazioEnabled = <p>Nenhum álbum foi encontrado</p>;
 
     return (
       <div data-testid="page-search">
