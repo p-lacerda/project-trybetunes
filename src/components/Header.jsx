@@ -11,18 +11,20 @@ class Header extends React.Component {
       name: '',
       loading: true,
     };
+
+    this.generateUser = this.generateUser.bind(this);
   }
 
-  async componentDidMount() {
-    await getUser()
-      .then(
-        (result) => {
-          this.setState({
-            name: result.name,
-            loading: false,
-          });
-        },
-      );
+  componentDidMount() {
+    this.generateUser();
+  }
+
+  async generateUser() {
+    const result = await getUser();
+    this.setState({
+      name: result.name,
+      loading: false,
+    });
   }
 
   render() {

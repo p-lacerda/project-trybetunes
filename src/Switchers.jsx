@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Header from './components/Header';
 import Login from './pages/Login';
 import Search from './pages/Search';
 import Favorites from './pages/Favorites';
@@ -13,23 +12,11 @@ class Switchers extends React.Component {
   render() {
     return (
       <Switch>
-        <Route path="/search">
-          <Header />
-          <Search />
-        </Route>
-        <Route path="/favorites">
-          <Header />
-          <Favorites />
-        </Route>
-        <Route path="/profile">
-          <Header />
-          <Profile />
-          <ProfileEdit />
-        </Route>
-        <Route path="/album/:id">
-          <Header />
-          <Album />
-        </Route>
+        <Route path="/search" component={ Search } />
+        <Route path="/favorites" component={ Favorites } />
+        <Route path="/profile" component={ Profile } />
+        <Route path="/profile/edit" component={ ProfileEdit } />
+        <Route path="/album/:id" component={ Album } />
         <Route exact path="/" component={ Login } />
         <Route path="*" component={ NotFound } />
       </Switch>
